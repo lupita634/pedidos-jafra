@@ -1,13 +1,12 @@
 const CACHE_NAME = 'v4.8_Lupita_PWA';
 
 const urlsToCache = [
-  '/PedidosJafra/',
-  '/PedidosJafra/index.html',
-  '/PedidosJafra/secciones/formulario.html'
+  './',
+  './index.html',
+  './secciones/formulario.html'
 ];
 
-// INSTALAR
-self.addEventListener('message', function(event) {
+self.addEventListener('message', event => {
   if (event.data === 'mostrarNotificacion') {
     self.registration.showNotification('WhatsApp', {
       body: 'Nuevo mensaje de Lupita: "Hola"',
@@ -24,7 +23,7 @@ self.addEventListener('message', function(event) {
   }
 });
 
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', event => {
   event.notification.close();
   event.waitUntil(
     clients.openWindow("https://wa.me/522751203903")
