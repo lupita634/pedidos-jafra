@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Control de Pedidos Jafra</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!------------------ Configuración de PWA ------------------>
+  <meta name="theme-color" content="#274060"/>
+  <meta name="MobileOptimized" content="width"/>
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <link rel="apple-touch-icon" href="img/icon1.png"/>
+  <link rel="manifest" href="manifest.json">
+  <!------------------ Fin Configuración de PWA ------------------>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="main.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- CABECERA -->
+    <header class="#main-header">
+      <a href="#index" class="logo">
+        <img src="img/R.jpeg" alt="Logo Jafra" class="logo-img">
+        <span class="logo-text">Productos Jafra</span>
+      </a>
+
+      <nav>
+        <a href="#index">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#videos">Videos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="secciones/formulario.html">Formulario</a>
+      </nav>
+
+      <div class="clearfix"></div>
+    </header>
+
+    <div class="divider"></div>
+
+    <main>
+      <!-- slider -->
+      <div class="section-wrap" id="index">
+        <section class="hero">
+          <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="img/JAFRA.png" alt="Imagen 1"></div>
+              <div class="slide"><img src="img/jafra2.png" alt="Imagen 2"></div>
+              <div class="slide"><img src="img/R2.jpeg" alt="Imagen 3"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div class="section-wrap" id="productos">
+        <h2 class="section-title">Productos</h2>
+        <div class="divider"></div>
+
+        <h3 class="category-title">Cuidado de la piel</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/s-l500.jpg" alt="Crema hidratante">
+            <h3>Crema Hidratante</h3>
+            <p>Hidratación profunda para todo tipo de piel.</p>
+          </article>
+          <article class="card">
+            <img src="img/02.jpg" alt="Limpiador facial">
+            <h3>Limpiador Facial</h3>
+            <p>Elimina impurezas dejando la piel suave.</p>
+          </article>
+        </div>
+
+        <h3 class="category-title">Fragancias</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/03.jpg" alt="Perfume 1">
+            <h3>Perfume Floral</h3>
+            <p>Notas frescas y delicadas para uso diario.</p>
+          </article>
+          <article class="card">
+            <img src="img/04.jpg" alt="Perfume 2">
+            <h3>Perfume Intenso</h3>
+            <p>Aroma duradero con esencia elegante.</p>
+          </article>
+        </div>
+
+        <h3 class="category-title">Maquillaje</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/05.jpg" alt="Labial">
+            <h3>Labial Matte</h3>
+            <p>Colores vibrantes con larga duración.</p>
+          </article>
+          <article class="card">
+            <img src="img/06.jpg" alt="Base líquida">
+            <h3>Base Líquida</h3>
+            <p>Cobertura uniforme y acabado natural.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- PROMOCIONES -->
+      <div class="section-wrap" id="promociones">
+        <h2 class="section-title">Promociones</h2>
+        <div class="divider"></div>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/07.jpg" alt="Labial">
+            <h3>Combo Cuidado Facial</h3>
+            <p>Compra crema hidratante + limpiador facial y obtén 10% de descuento.</p>
+          </article>
+          <article class="card">
+            <img src="img/08.jpg" alt="Labial">
+            <h3>Labiales Matte</h3>
+            <p>Compra 2 y llévate un mini delineador gratis.</p>
+          </article>
+          <article class="card">
+            <img src="img/03.jpg" alt="Labial">
+            <h3>Perfume Floral</h3>
+            <p>Envío gratis en compras mayores a $1000.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- VIDEOS -->
+      <div class="section-wrap" id="videos">
+        <h2 class="section-title">Videos</h2>
+        <div class="divider"></div>
+
+        <div class="videos-list">
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KsUiRayahmo" allowfullscreen></iframe>
+            <div class="title">Demostración 1</div>
+          </div>
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2FJ-UTOmnMk" allowfullscreen></iframe>
+            <div class="title">Consejos de Belleza</div>
+          </div>
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JhE8TTr9ha8" allowfullscreen></iframe>
+            <div class="title">Nuevos Lanzamientos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="section-wrap" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="divider"></div>
+
+        <div class="socials">
+          <a href="https://www.facebook.com" target="_blank" class="icon">
+            <img src="img/face.png" alt="Facebook">
+          </a>
+          <a href="https://wa.me/5215512345678" target="_blank" class="icon">
+            <img src="img/whats.png" alt="WhatsApp">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="icon">
+            <img src="img/insta.png" alt="Instagram">
+          </a>
+        </div>
+
+        <div class="contact-details">
+          <p><strong>Dirección:</strong> Barrio Santa cruz</p>
+          <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
+          <p><strong>Correo:</strong> info@gmail.com</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Control de Pedidos Jafra
+    </footer>
+  </div>
+
+  <!-- BOTÓN FLOTANTE -->
+  <button id="btnSubir" title="Volver arriba">↑</button>
+
+<!--  BOTÓN NOTIFICACIÓN 
+  <div style="text-align:center; margin-top:40px;">
+      <button id="btnNotificar"
+          style="background:#25D366;color:white;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;">
+          Mostrar Notificación WhatsApp
+      </button>
+  </div> -->
+
+  <!-- REGISTRO SW + NOTIFICACIÓN -->
+  <!--<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/Pedidos%20Jafra/sw.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.error('SW Error:', err));
+    }
+
+    document.getElementById('btnNotificar').addEventListener('click', async () => {
+      const permiso = await Notification.requestPermission();
+      if (permiso !== 'granted') {
+        alert('Debes permitir las notificaciones.');
+        return;
+      }
+
+      const reg = await navigator.serviceWorker.getRegistration();
+
+      reg.showNotification('WhatsApp', {
+        body: '👋 Nuevo mensaje: "¿Todo bien con el proyecto?"',
+        icon: 'img/icon1.png',
+        badge: 'img/icon1.png',
+        vibrate: [200, 100, 200],
+        actions: [
+          { action: 'responder', title: 'Responder' },
+          { action: 'ver', title: 'Ver mensaje' }
+        ],
+        tag: 'whatsapp-msg',
+        renotify: true
+      });
+    });
+  </script>--> 
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/PedidosJafra/sw.js")
+    .then(() => console.log("SW registrado correctamente"))
+    .catch(err => console.log("Error al registrar SW:", err));
+}
+
+</script>
+
+
+  <!-- BOTÓN SUBIR -->
+  <script>
+    const btnSubir = document.getElementById("btnSubir");
+
+    window.onscroll = function() {
+      btnSubir.style.display =
+        (document.documentElement.scrollTop > 200) ? "flex" : "none";
+    };
+
+    btnSubir.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>

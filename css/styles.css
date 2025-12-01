@@ -1,0 +1,417 @@
+/* Variables */
+:root {
+  --accent: #274060;
+  --accent-strong: #1c314c;
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #666;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { font-family: Arial, sans-serif; background:#fbfcfe; color:var(--text); }
+
+/* Contenedor */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+/* Header */
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+header + .divider {
+  height: 6px;
+  background: var(--accent);
+  border-radius: 6px;
+  margin: 10px 0 20px;
+}
+.logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+.logo-img { width:48px; height:48px; border-radius:8px; object-fit:cover; }
+.logo-text { font-weight:800; }
+
+/*deslizamiento*/
+html {
+  scroll-behavior: smooth; /* deslizamiento suave al hacer clic en enlaces internos */
+}
+
+/* efecto de desvanecimiento al hacer hover en enlaces (solo visual) */
+nav a {
+  transition: background 0.3s, opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+
+
+/* Nav */
+nav { display:flex; gap:12px; }
+nav a {
+  text-decoration:none;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  background: rgba(255,255,255,0.15);
+}
+nav a:hover { background: rgba(255,255,255,0.3); }
+
+/* Secciones */
+.section-wrap {
+  width:100%;
+  max-width:920px;
+  text-align:center;
+  margin: 0 auto 40px;
+}
+.divider {
+  height: 2px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin: 12px auto 20px;
+  max-width: 80%;
+}
+h2.section-title {
+  font-size:22px;
+  margin-bottom:6px;
+  color:var(--accent-strong);
+}
+h3.category-title {
+  font-size:18px;
+  margin:16px 0 10px;
+  color:#333;
+  text-align:center; /* centrado */
+}
+
+/* Slider */
+.hero {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.slider { width:100%; height:220px; border-radius:8px; overflow:hidden; }
+.slides { display:flex; width:300%; height:100%; animation: slide 12s infinite; }
+.slide { flex:0 0 33.3333%; }
+.slide img { width:100%; height:100%; object-fit:cover; }
+@keyframes slide {
+  0%,30% { transform: translateX(0%); }
+  35%,65% { transform: translateX(-33.3333%); }
+  70%,100% { transform: translateX(-66.6666%); }
+}
+
+/* Productos */
+.services-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  justify-items:center; /* centra las cards */
+}
+.card {
+  background:#fff;
+  border-radius:10px;
+  padding:12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align:center; /* centrado */
+}
+.card img {
+  width:100%; height:120px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+.card h3 { font-size:16px; margin-bottom:6px; }
+.card p { font-size:13px; color:#444; }
+
+/* Videos */
+.videos-list {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.video-thumb {
+  position: relative;
+  width: 220px;      /* tamaño de tu thumb */
+  height: 120px;     /* tamaño de tu thumb */
+  border-radius: 10px;
+  background: linear-gradient(180deg,#111,#333);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;  /* importante para que el video no sobresalga */
+}
+
+.video-thumb iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  object-fit: cover; /* ajusta la imagen del video para cubrir el contenedor */
+  z-index: 0;        /* para que el título quede encima */
+}
+
+.video-thumb .title {
+  position: relative;
+  z-index: 1;       /* para que quede visible sobre el video */
+  background: rgba(0,0,0,0.5); /* opcional: fondo semi-transparente */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Contacto */
+.socials {
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.socials .icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:var(--accent);
+  overflow:hidden;
+  transition: transform 0.3s, background 0.3s;
+  text-decoration:none;
+}
+
+.socials .icon:hover {
+  transform: scale(1.1);
+  background: var(--accent-strong);
+}
+
+.socials .icon img {
+  width:60%;   /* ajusta tamaño del ícono dentro del círculo */
+  height:60%;
+  object-fit:contain;
+}
+
+
+
+/* Footer */
+footer {
+  margin-top:26px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+  padding:14px 0;
+  border-top: 6px solid var(--accent);
+  border-radius: 0 0 12px 12px;
+}
+
+/* ------------------- CLEARFIX ------------------- */
+.clearfix{ 
+    clear: both;
+    float: none;
+}
+
+/* ------------------------------------------- MEDIA QUERIES ---------------------------
+PARA ADAPTAR NUESTRA PAGINA A CUALQUIER RESOLUCIÓN DE PANTALLA, ES UNA TECNICA O ELEMENTOS DE CSS3, PARA LIMITAR CARACTERISTICAS
+SOBRE ANCHO X ALTO DE LA VENTANA. REGLA PARA HACER USO DE ELLO ES CON '@media reglas'. Configurar antes VIEWPORT en cualquier HTML para que
+se acepte el RESPONSIVE DESIGN
+
+Indicar para qué tipo de pantalla o dispositivo estará dirigida el media quierie: movil, laptop, pc, tv o todo.*/
+
+/* @media - Aplica para todos los dispositivos. */
+/* @media all - Aplica para todos los dispositivos. */
+/* @media screen - Aplica para pantallas de PC. */
+/* @media print - Aplica para unicamente en vista de impresión. */
+
+/*--------------- 1.- Header (barra de menus) cambiar color cuando la resolucion sea menor a 1000px-----------------------*/
+@media all and (max-width:1000px){
+    header {
+        background: #32a852; /* Verde cuando se achica */
+    }
+} 
+
+/*--------------- 2.- Títulos de secciones cuando la resolucion sea menor a 1000px ----------------*/
+@media (max-width:1000px){
+    h2.section-title {
+        font-size: 28px;       
+        color: #e36922;       
+    }
+}
+/* ajuste container */
+@media (max-width:1225px){
+    .container{
+        width: 95%;
+    }
+}
+
+@media(max-width:1080px){
+    /* ajuste a #main-header */
+    #main-header{
+        height: 70px;
+        line-height: 65px;
+    }
+}
+
+/* 3.- ajuste para cuando la ventana sea menor a 799px */
+@media (max-width:799px){
+    .logo {
+       width: 227px;
+       margin: 0 auto;
+       display: block;
+       text-align: center;
+    }
+    nav {
+       margin: 0 auto;
+       text-align: center;
+    }
+    .slider {
+       overflow: hidden;
+       height: 150px;
+    }
+    .slider img {
+       height: 150px;
+       object-fit: cover;
+    }
+
+   #slider h2{
+       font-size: 30px;
+       line-height: 30px;
+       margin-top: 60px;
+   }
+}
+
+@media (max-width:460px){
+    #slider h2{
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 50px;
+    }
+}
+@media (max-width:377px){
+    #menu{
+        width: 100%;
+        text-align: center;
+    }
+    #menu ul li{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    #slider h2{
+        margin-top: 25px;
+    }
+}
+@media (max-width:345px){
+    #main-header{
+        height: auto;
+    }
+    #menu ul li{        
+        float: none;
+    }
+}
+/*--------------4 Tamaño de videos cuando la resolucion sea de 460px ----------------*/
+@media (max-width:460px){
+    .video-thumb iframe {
+        width: 100%;   /* Ajustado al contenedor */
+        height: 200px; /* Más bajo para móvil */
+    }
+
+    #servicio img{
+        margin-bottom: 10px;
+    }
+    #video iframe{
+        width: 560%;
+        height: 315px;
+    }
+}
+
+/* ---------------- RESPONSIVE HEADER ---------------- */
+@media (max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    nav {
+        flex-direction: row;      /* Se mantienen en fila */
+        flex-wrap: wrap;          /* Se acomodan si no caben */
+        justify-content: center;  /* Centrado */
+        gap: 8px;
+    }
+
+    nav a {
+        width: auto;              /* Ya no ocupan todo el ancho */
+        padding: 8px 14px;        /* Botoncitos más pequeños */
+        border-radius: 6px;
+        font-size: 15px;
+        background: rgba(255,255,255,0.15);
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,0.3);
+    }
+}
+
+/*-------------------- 5.- Logo cuando la resolucion sea de 500px ----------------*/
+@media (max-width:500px){
+    .logo-text {
+        font-size: 16px;         
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;            
+    }
+}
+/*--- ESTILO DEL BOTÓN FLOTANTE---- */
+ #btnSubir {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #274060;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+
+    #btnSubir:hover {
+      background-color: #3e5b8a;
+      transform: scale(1.1);
+    }
+    
+    /*----formulario*/
+
+    

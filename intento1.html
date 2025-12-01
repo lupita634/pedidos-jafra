@@ -1,0 +1,638 @@
+////porfavor as que funcione los queries del punto 1, 3, 4, 5 porfavor///
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Control de Pedidos Jafra</title>
+  <link rel="stylesheet" href="css/styles.css">
+<!-----------------------------configuracion dee etiquetas para que funcione nuestra PWA------------------->
+<!--color de la app-->
+<meta name="theme-color" content="#274060"/>
+
+<!--optimizacion para movil-->
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+<!--Meta etiquetas PWA para Apple-->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<link rel="apple-touch-icon" href="img/icon1.png"/>
+<link rel="apple-touch-startup-image" href="img/icon1.png"/>
+
+  <!--configuracion general de PWA-->
+  <link rel="manifest" href="manifest.json">
+
+  <!------------------------Fin Meta etiquetas para que funcione nuestra PWA ------------------------------->
+</head>
+<body>
+  <div class="container">
+    <!-- CABECERA -->
+    <header  class=" #main-header">
+      <a href="#index" class="logo">
+        <img src="img/R.jpeg" alt="Logo Jafra" class="logo-img">
+        <span class="logo-text">Productos Jafra</span>
+      </a>
+
+      <nav>
+        <a href="#index">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#videos">Videos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="clearfix"></div>
+    </header>
+
+    <div class="divider"></div>
+
+    <main>
+      <!-- slider -->
+      <div class="section-wrap" id="index">
+        <section class="hero">
+          <div class="slider">
+            <div class="slides">
+              <div class="slide"><img src="img/JAFRA.png" alt="Imagen 1"></div>
+              <div class="slide"><img src="img/jafra2.png" alt="Imagen 2"></div>
+              <div class="slide"><img src="img/R2.jpeg" alt="Imagen 3"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div class="section-wrap" id="productos">
+        <h2 class="section-title">Productos</h2>
+        <div class="divider"></div>
+
+        <!-- Categoría: Cuidado de la piel -->
+        <h3 class="category-title">Cuidado de la piel</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/s-l500.jpg" alt="Crema hidratante">
+            <h3>Crema Hidratante</h3>
+            <p>Hidratación profunda para todo tipo de piel.</p>
+          </article>
+          <article class="card">
+            <img src="img/02.jpg" alt="Limpiador facial">
+            <h3>Limpiador Facial</h3>
+            <p>Elimina impurezas dejando la piel suave.</p>
+          </article>
+        </div>
+         <div class="clearfix"></div>
+
+        <!-- Categoría: Fragancias -->
+        <h3 class="category-title">Fragancias</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/03.jpg" alt="Perfume 1">
+            <h3>Perfume Floral</h3>
+            <p>Notas frescas y delicadas para uso diario.</p>
+          </article>
+          <article class="card">
+            <img src="img/04.jpg" alt="Perfume 2">
+            <h3>Perfume Intenso</h3>
+            <p>Aroma duradero con esencia elegante.</p>
+          </article>
+        </div>
+          <div class="clearfix"></div>
+
+        <!-- Categoría: Maquillaje -->
+        <h3 class="category-title">Maquillaje</h3>
+        <div class="services-grid">
+          <article class="card">
+            <img src="img/05.jpg" alt="Labial">
+            <h3>Labial Matte</h3>
+            <p>Colores vibrantes con larga duración.</p>
+          </article>
+          <article class="card">
+            <img src="img/06.jpg" alt="Base líquida">
+            <h3>Base Líquida</h3>
+            <p>Cobertura uniforme y acabado natural.</p>
+          </article>
+        </div>
+         <div class="clearfix"></div>
+      </div>
+
+      <!-- PROMOCIONES -->
+<div class="section-wrap" id="promociones">
+  <h2 class="section-title">Promociones</h2>
+  <div class="divider"></div>
+  <div class="services-grid">
+    <article class="card">
+      <img src="img/07.jpg" alt="Labial">
+      <h3>Combo Cuidado Facial</h3>
+      <p>Compra crema hidratante + limpiador facial y obtén 10% de descuento.</p>
+    </article>
+    <article class="card">
+      <img src="img/08.jpg" alt="Labial">
+      <h3>Labiales Matte</h3>
+      <p>Compra 2 y llévate un mini delineador gratis.</p>
+    </article>
+    <article class="card">
+      <img src="img/03.jpg" alt="Labial">
+      <h3>Perfume Floral</h3>
+      <p>Envío gratis en compras mayores a $1000.</p>
+    </article>
+  </div>
+</div>
+
+
+      <!-- VIDEOS -->
+      <div class="section-wrap" id="videos">
+        <h2 class="section-title">Videos</h2>
+        <div class="divider"></div>
+
+        <div class="videos-list">
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KsUiRayahmo?si=RrD-sw6LdlRQQRwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="title">Demostración 1</div>
+          </div>
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2FJ-UTOmnMk?si=mExwUo-ilHiIi9cN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="title">Consejos de Belleza</div>
+          </div>
+          <div class="video-thumb">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JhE8TTr9ha8?si=Uhz2UpwKs-veLB5_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="title">Nuevos Lanzamientos</div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="section-wrap" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="divider"></div>
+
+       <div class="socials">
+  <a href="https://www.facebook.com" target="_blank" class="icon">
+    <img src="img/face.png" alt="Facebook">
+  </a>
+  <a href="https://wa.me/5215512345678" target="_blank" class="icon">
+    <img src="img/whats.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com" target="_blank" class="icon">
+    <img src="img/insta.png" alt="Instagram">
+  </a>
+</div>
+
+
+
+        <div class="contact-details">
+          <p><strong>Dirección:</strong> Barrio Santa cruz</p>
+          <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
+          <p><strong>Correo:</strong> info@gmail.com</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Control de Pedidos Jafra 
+    </footer>
+  </div>
+</body>
+</html>
+//////////////// Este es mi codigo de css///////////////////
+/* Variables */
+:root {
+  --accent: #274060;
+  --accent-strong: #1c314c;
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #666;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { font-family: Arial, sans-serif; background:#fbfcfe; color:var(--text); }
+
+/* Contenedor */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+/* Header */
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+header + .divider {
+  height: 6px;
+  background: var(--accent);
+  border-radius: 6px;
+  margin: 10px 0 20px;
+}
+.logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+.logo-img { width:48px; height:48px; border-radius:8px; object-fit:cover; }
+.logo-text { font-weight:800; }
+
+/*deslizamiento*/
+html {
+  scroll-behavior: smooth; /* deslizamiento suave al hacer clic en enlaces internos */
+}
+
+/* efecto de desvanecimiento al hacer hover en enlaces (solo visual) */
+nav a {
+  transition: background 0.3s, opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+
+
+/* Nav */
+nav { display:flex; gap:12px; }
+nav a {
+  text-decoration:none;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  background: rgba(255,255,255,0.15);
+}
+nav a:hover { background: rgba(255,255,255,0.3); }
+
+/* Secciones */
+.section-wrap {
+  width:100%;
+  max-width:920px;
+  text-align:center;
+  margin: 0 auto 40px;
+}
+.divider {
+  height: 2px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin: 12px auto 20px;
+  max-width: 80%;
+}
+h2.section-title {
+  font-size:22px;
+  margin-bottom:6px;
+  color:var(--accent-strong);
+}
+h3.category-title {
+  font-size:18px;
+  margin:16px 0 10px;
+  color:#333;
+  text-align:center; /* centrado */
+}
+
+/* Slider */
+.hero {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.slider { width:100%; height:220px; border-radius:8px; overflow:hidden; }
+.slides { display:flex; width:300%; height:100%; animation: slide 12s infinite; }
+.slide { flex:0 0 33.3333%; }
+.slide img { width:100%; height:100%; object-fit:cover; }
+@keyframes slide {
+  0%,30% { transform: translateX(0%); }
+  35%,65% { transform: translateX(-33.3333%); }
+  70%,100% { transform: translateX(-66.6666%); }
+}
+
+/* Productos */
+.services-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  justify-items:center; /* centra las cards */
+}
+.card {
+  background:#fff;
+  border-radius:10px;
+  padding:12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align:center; /* centrado */
+}
+.card img {
+  width:100%; height:120px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+.card h3 { font-size:16px; margin-bottom:6px; }
+.card p { font-size:13px; color:#444; }
+
+/* Videos */
+.videos-list {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.video-thumb {
+  position: relative;
+  width: 220px;      /* tamaño de tu thumb */
+  height: 120px;     /* tamaño de tu thumb */
+  border-radius: 10px;
+  background: linear-gradient(180deg,#111,#333);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;  /* importante para que el video no sobresalga */
+}
+
+.video-thumb iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  object-fit: cover; /* ajusta la imagen del video para cubrir el contenedor */
+  z-index: 0;        /* para que el título quede encima */
+}
+
+.video-thumb .title {
+  position: relative;
+  z-index: 1;       /* para que quede visible sobre el video */
+  background: rgba(0,0,0,0.5); /* opcional: fondo semi-transparente */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Contacto */
+.socials {
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.socials .icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:var(--accent);
+  overflow:hidden;
+  transition: transform 0.3s, background 0.3s;
+  text-decoration:none;
+}
+
+.socials .icon:hover {
+  transform: scale(1.1);
+  background: var(--accent-strong);
+}
+
+.socials .icon img {
+  width:60%;   /* ajusta tamaño del ícono dentro del círculo */
+  height:60%;
+  object-fit:contain;
+}
+
+
+
+/* Footer */
+footer {
+  margin-top:26px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+  padding:14px 0;
+  border-top: 6px solid var(--accent);
+  border-radius: 0 0 12px 12px;
+}
+
+/* ------------------- CLEARFIX ------------------- */
+.clearfix{ 
+    clear: both;
+    float: none;
+}
+
+/* ------------------------------------------- MEDIA QUERIES ---------------------------
+PARA ADAPTAR NUESTRA PAGINA A CUALQUIER RESOLUCIÓN DE PANTALLA, ES UNA TECNICA O ELEMENTOS DE CSS3, PARA LIMITAR CARACTERISTICAS
+SOBRE ANCHO X ALTO DE LA VENTANA. REGLA PARA HACER USO DE ELLO ES CON '@media reglas'. Configurar antes VIEWPORT en cualquier HTML para que
+se acepte el RESPONSIVE DESIGN
+
+Indicar para qué tipo de pantalla o dispositivo estará dirigida el media quierie: movil, laptop, pc, tv o todo.*/
+
+/* @media - Aplica para todos los dispositivos. */
+/* @media all - Aplica para todos los dispositivos. */
+/* @media screen - Aplica para pantallas de PC. */
+/* @media print - Aplica para unicamente en vista de impresión. */
+
+/*--------------- 1.- Header (barra de menus) header cambiar el color cuando la resolucion del dispositivo alcanze un ancho 1000px-----------------------*/
+
+ @media all and (max-width:1000px){
+    #main-header{
+        background: #32a852;
+    }
+} 
+
+/* ajuste container */
+@media (max-width:1225px){
+    .container{
+        width: 95%;
+    }
+}
+
+@media(max-width:1080px){
+    /* ajuste a #main-header */
+    #main-header{
+        height: 70px;
+        line-height: 65px;
+    }
+}
+
+/* 3.- ajuste para cuando la ventana sea menor a 799px  aplicar ajuste de logo width:227px y bueno lo que contiene*/
+@media (max-width:799px){
+    #logo{
+       width: 227px;
+       float: none;
+       margin: 0px auto;
+   }
+   #menu{
+       float: none;
+       margin: 0px auto;
+   }
+   #slider{
+       overflow: hidden;
+       height: 150px;
+   }
+   #slider h2{
+       font-size: 30px;
+       line-height: 30px;
+       margin-top: 60px;
+   }
+}
+
+@media (max-width:460px){
+    #slider h2{
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 50px;
+    }
+}
+@media (max-width:377px){
+    #menu{
+        width: 100%;
+        text-align: center;
+    }
+    #menu ul li{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    #slider h2{
+        margin-top: 25px;
+    }
+}
+@media (max-width:345px){
+    #main-header{
+        height: auto;
+    }
+    #menu ul li{        
+        float: none;
+    }
+}
+/*--------------4 Tamaño de videos cuando la resolucion sea de 460px debe cambiar a  width: 560%;
+        height: 315px;-----------*/
+@media (max-width:460px){
+    #servicio, .video{
+        width: 75%;
+        float: none;
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    #servicio img{
+        margin-bottom: 10px;
+    }
+    #video iframe{
+        width: 560%;
+        height: 315px;
+    }
+}
+
+/* ---------------- RESPONSIVE HEADER ---------------- */
+@media (max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    nav {
+        flex-direction: row;      /* Se mantienen en fila */
+        flex-wrap: wrap;          /* Se acomodan si no caben */
+        justify-content: center;  /* Centrado */
+        gap: 8px;
+    }
+
+    nav a {
+        width: auto;              /* Ya no ocupan todo el ancho */
+        padding: 8px 14px;        /* Botoncitos más pequeños */
+        border-radius: 6px;
+        font-size: 15px;
+        background: rgba(255,255,255,0.15);
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,0.3);
+    }
+}
+
+/*-------------------- 5.- logo cuando la resolucion sea de 500px la imagen debe cambiar a una nueva   width: 50px;
+        height: 50px;  ----------------*/
+
+@media (max-width:500px){
+    .logo-text {
+        font-size: 16px;         /* Ajusta tamaño del texto del logo en móvil */
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;            /* Ajusta tamaño del logo en móvil */
+    }
+}
+/////////
+
+
+/*--------------- 1.- Header (barra de menus) cambiar color cuando la resolucion sea menor a 1000px-----------------------*/
+@media all and (max-width:1000px){
+    header {
+        background: #32a852; /* Verde cuando se achica */
+    }
+} 
+
+/* 3.- ajuste para cuando la ventana sea menor a 799px */
+@media (max-width:799px){
+    .logo {
+       width: 227px;
+       margin: 0 auto;
+       display: block;
+       text-align: center;
+    }
+    nav {
+       margin: 0 auto;
+       text-align: center;
+    }
+    .slider {
+       overflow: hidden;
+       height: 150px;
+    }
+    .slider img {
+       height: 150px;
+       object-fit: cover;
+    }
+}
+
+/*--------------4 Tamaño de videos cuando la resolucion sea de 460px ----------------*/
+@media (max-width:460px){
+    .video-thumb iframe {
+        width: 100%;   /* Ajustado al contenedor */
+        height: 200px; /* Más bajo para móvil */
+    }
+}
+
+/*-------------------- 5.- Logo cuando la resolucion sea de 500px ----------------*/
+@media (max-width:500px){
+    .logo-text {
+        font-size: 16px;         
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;            
+    }
+}
+
+
+/*--------------- 2.- Títulos de secciones cuando la resolucion sea menor a 1000px ----------------*/
+@media (max-width:1000px){
+    h2.section-title {
+        font-size: 28px;       /* tamaño estilo H2 */
+        color: #e36922;        /* nuevo color */
+    }
+}

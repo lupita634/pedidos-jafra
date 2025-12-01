@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Pedido Jafra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#fce4ec,#f3e5f5);
+      margin:0;
+      padding:0;
+    }
+
+    .container{
+      max-width:500px;
+      margin:50px auto;
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    h2{
+      text-align:center;
+      color:#b89957;
+    }
+
+    .form-group{
+      margin-bottom:15px;
+    }
+
+    label{
+      font-weight:bold;
+      color:#555;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:10px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      outline:none;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      border:none;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .btn-enviar{
+      background:#b89957;
+      color:white;
+    }
+
+    /* ================= NOTIFICACIÓN WHATSAPP ================= */
+    #notiWhatsApp{
+      position:fixed;
+      top:-120px;
+      right:20px;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:15px 20px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      transition:0.5s;
+      z-index:9999;
+      max-width:300px;
+    }
+
+    #notiWhatsApp img{
+      width:45px;
+    }
+
+    #notiWhatsApp strong{
+      color:#25D366;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔔 NOTIFICACIÓN ESTILO WHATSAPP -->
+<div id="notiWhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  <div>
+    <strong>WhatsApp</strong>
+    <p>👋 Nuevo mensaje: Pedido enviado correctamente</p>
+  </div>
+</div>
+
+<div class="container">
+  <form id="formPedido">
+    <h2>Pedido Jafra</h2>
+
+    <div class="form-group">
+      <label>Nombre completo</label>
+      <input type="text" id="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Teléfono</label>
+      <input type="number" id="telefono" required>
+    </div>
+
+    <div class="form-group">
+      <label>Asunto</label>
+      <input type="text" id="asunto" required>
+    </div>
+
+    <div class="form-group">
+      <label>Mensaje</label>
+      <textarea id="mensaje" rows="4" required></textarea>
+    </div>
+
+<button id="btnNotificar">Enviar Pedido</button>
+  </form>
+</div>
+
+<script>
+// Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+  .then(() => console.log("SW registrado correctamente"))
+  .catch(err => console.log("Error SW:", err));
+}
+
+// BOTÓN
+document.getElementById("btnNotificar").addEventListener("click", async () => {
+
+  const permiso = await Notification.requestPermission();
+  if (permiso !== "granted") {
+    alert("Debes permitir notificaciones");
+    return;
+  }
+
+  const sw = await navigator.serviceWorker.ready;
+
+  // 🔔 MANDAMOS ORDEN AL SW
+  sw.active.postMessage("mostrarNotificacion");
+
+  // ⏳ Esperamos para que se vea la notificación
+  setTimeout(() => {
+    window.location.href = "https://wa.me/522751203903";
+  }, 4000);
+
+});
+</script>
+
+</body>
+</html>
