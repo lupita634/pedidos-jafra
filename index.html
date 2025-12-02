@@ -226,7 +226,7 @@
   <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/PedidosJafra/sw.js")
+    .register('./sw.js')
     .then(() => console.log("SW registrado correctamente"))
     .catch(err => console.log("Error al registrar SW:", err));
 }
