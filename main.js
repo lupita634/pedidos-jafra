@@ -161,3 +161,28 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("⚠ jQuery no cargó, el scroll suave no funcionará.");
     }
 });
+
+// ---------------- BUSCADOR DE PRODUCTOS ----------------
+document.getElementById("buscarProducto").addEventListener("keyup", function () {
+    let filtro = this.value.toLowerCase();
+    let tarjetas = document.querySelectorAll("#productos .card");
+
+    tarjetas.forEach(card => {
+        let nombre = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = nombre.includes(filtro) ? "block" : "none";
+    });
+});
+
+// ---------------- CARRITO ----------------
+let carrito = [];
+
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-carrito")) {
+        let nombreProd = e.target.dataset.nombre;
+
+        carrito.push(nombreProd);
+
+        alert(nombreProd + " agregado al carrito ✔");
+        console.log("Carrito actual:", carrito);
+    }
+});

@@ -414,4 +414,70 @@ Indicar para qué tipo de pantalla o dispositivo estará dirigida el media quier
     
     /*----formulario*/
 
-    
+    .search-input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn-carrito {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #274060;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-carrito:hover {
+  background: #1b2d44;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffe3f4, #fff);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sección Títulos */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #b30068;
+}
+
+/* Cards Bootstrap personalizadas */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Para mantener tu slider */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+}

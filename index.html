@@ -6,6 +6,9 @@
   <title>Control de Pedidos Jafra</title>
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Bootstrap Framework agregado -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!------------------ Configuración de PWA ------------------>
   <meta name="theme-color" content="#274060"/>
   <meta name="MobileOptimized" content="width"/>
@@ -36,6 +39,7 @@
         <a href="#productos">Productos</a>
         <a href="#promociones">Promociones</a>
         <a href="#videos">Videos</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
         <a href="secciones/formulario.html">Formulario</a>
       </nav>
@@ -47,21 +51,81 @@
 
     <main>
       <!-- slider -->
-      <div class="section-wrap" id="index">
-        <section class="hero">
-          <div class="slider">
-            <div class="slides">
-              <div class="slide"><img src="img/JAFRA.png" alt="Imagen 1"></div>
-              <div class="slide"><img src="img/jafra2.png" alt="Imagen 2"></div>
-              <div class="slide"><img src="img/R2.jpeg" alt="Imagen 3"></div>
-            </div>
-          </div>
-        </section>
+     <!-- SLIDER BOOTSTRAP -->
+<div class="section-wrap" id="index">
+  <section class="hero">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
       </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/JAFRA.png" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/jafra2.png" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/R2.jpeg" class="d-block w-100" alt="Imagen 3">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+  </section>
+</div>
+
+      <!-- NOSOTROS -->
+<div class="section-wrap" id="nosotros">
+  <h2 class="section-title">Nosotros</h2>
+  <div class="divider"></div>
+
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="img/R.jpeg" class="img-fluid rounded shadow" alt="Jafra Equipo">
+    </div>
+
+    <div class="col-md-6">
+      <h3>¿Quiénes somos?</h3>
+      <p>
+        Somos un equipo dedicado a ofrecer productos Jafra de la mejor calidad.
+        Trabajamos con compromiso, responsabilidad y transparencia para brindar
+        una experiencia confiable a cada cliente.
+      </p>
+
+      <h3>Nuestra misión</h3>
+      <p>
+        Brindar artículos de belleza, fragancias y cuidado personal con un
+        servicio profesional, amable y eficiente.
+      </p>
+
+      <h3>Nuestros valores</h3>
+      <ul>
+        <li>Calidad</li>
+        <li>Confianza</li>
+        <li>Responsabilidad</li>
+        <li>Buen servicio</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
       <!-- PRODUCTOS -->
       <div class="section-wrap" id="productos">
         <h2 class="section-title">Productos</h2>
+        <input type="text" id="buscarProducto" placeholder="Buscar producto..." class="search-input">
         <div class="divider"></div>
 
         <h3 class="category-title">Cuidado de la piel</h3>
@@ -70,11 +134,13 @@
             <img src="img/s-l500.jpg" alt="Crema hidratante">
             <h3>Crema Hidratante</h3>
             <p>Hidratación profunda para todo tipo de piel.</p>
+            <button class="btn-carrito" data-nombre="Crema Hidratante">Agregar al carrito</button>
           </article>
           <article class="card">
             <img src="img/02.jpg" alt="Limpiador facial">
             <h3>Limpiador Facial</h3>
             <p>Elimina impurezas dejando la piel suave.</p>
+            <button class="btn-carrito" data-nombre="Limpiador Facial">Agregar al carrito</button>
           </article>
         </div>
 
@@ -84,11 +150,13 @@
             <img src="img/03.jpg" alt="Perfume 1">
             <h3>Perfume Floral</h3>
             <p>Notas frescas y delicadas para uso diario.</p>
+            <button class="btn-carrito" data-nombre="Perfume Floral">Agregar al carrito</button>
           </article>
           <article class="card">
             <img src="img/04.jpg" alt="Perfume 2">
             <h3>Perfume Intenso</h3>
             <p>Aroma duradero con esencia elegante.</p>
+            <button class="btn-carrito" data-nombre="Perfume Intenso">Agregar al carrito</button>
           </article>
         </div>
 
@@ -98,11 +166,13 @@
             <img src="img/05.jpg" alt="Labial">
             <h3>Labial Matte</h3>
             <p>Colores vibrantes con larga duración.</p>
+            <button class="btn-carrito" data-nombre="Labial Matte">Agregar al carrito</button>
           </article>
           <article class="card">
             <img src="img/06.jpg" alt="Base líquida">
             <h3>Base Líquida</h3>
             <p>Cobertura uniforme y acabado natural.</p>
+            <button class="btn-carrito" data-nombre="Base Líquida">Agregar al carrito</button>
           </article>
         </div>
       </div>
@@ -116,16 +186,19 @@
             <img src="img/07.jpg" alt="Labial">
             <h3>Combo Cuidado Facial</h3>
             <p>Compra crema hidratante + limpiador facial y obtén 10% de descuento.</p>
+            <button class="btn-carrito" data-nombre="Combo Cuidado Facial">Agregar al carrito</button>
           </article>
           <article class="card">
             <img src="img/08.jpg" alt="Labial">
             <h3>Labiales Matte</h3>
             <p>Compra 2 y llévate un mini delineador gratis.</p>
+            <button class="btn-carrito" data-nombre="Labiales Matte">Agregar al carrito</button>
           </article>
           <article class="card">
             <img src="img/03.jpg" alt="Labial">
             <h3>Perfume Floral</h3>
             <p>Envío gratis en compras mayores a $1000.</p>
+            <button class="btn-carrito" data-nombre="Perfume Floral">Agregar al carrito</button>
           </article>
         </div>
       </div>
@@ -184,45 +257,6 @@
   <!-- BOTÓN FLOTANTE -->
   <button id="btnSubir" title="Volver arriba">↑</button>
 
-<!--  BOTÓN NOTIFICACIÓN 
-  <div style="text-align:center; margin-top:40px;">
-      <button id="btnNotificar"
-          style="background:#25D366;color:white;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;">
-          Mostrar Notificación WhatsApp
-      </button>
-  </div> -->
-
-  <!-- REGISTRO SW + NOTIFICACIÓN -->
-  <!--<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/Pedidos%20Jafra/sw.js')
-        .then(() => console.log('Service Worker registrado'))
-        .catch(err => console.error('SW Error:', err));
-    }
-
-    document.getElementById('btnNotificar').addEventListener('click', async () => {
-      const permiso = await Notification.requestPermission();
-      if (permiso !== 'granted') {
-        alert('Debes permitir las notificaciones.');
-        return;
-      }
-
-      const reg = await navigator.serviceWorker.getRegistration();
-
-      reg.showNotification('WhatsApp', {
-        body: '👋 Nuevo mensaje: "¿Todo bien con el proyecto?"',
-        icon: 'img/icon1.png',
-        badge: 'img/icon1.png',
-        vibrate: [200, 100, 200],
-        actions: [
-          { action: 'responder', title: 'Responder' },
-          { action: 'ver', title: 'Ver mensaje' }
-        ],
-        tag: 'whatsapp-msg',
-        renotify: true
-      });
-    });
-  </script>--> 
   <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
@@ -230,9 +264,7 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("SW registrado correctamente"))
     .catch(err => console.log("Error al registrar SW:", err));
 }
-
 </script>
-
 
   <!-- BOTÓN SUBIR -->
   <script>
@@ -247,6 +279,9 @@ if ("serviceWorker" in navigator) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
+
+  <!-- Bootstrap JS agregado -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

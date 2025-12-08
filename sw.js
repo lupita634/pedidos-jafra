@@ -9,7 +9,7 @@ const urlsToCache = [
 self.addEventListener('message', event => {
   if (event.data === 'mostrarNotificacion') {
     self.registration.showNotification('WhatsApp', {
-      body: 'Nuevo mensaje de Lupita: "Hola"',
+      body: 'Nuevo mensaje : "Hola"',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg',
       badge: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg',
       vibrate: [200, 100, 200],
