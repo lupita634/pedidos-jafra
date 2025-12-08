@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v4.8_Lupita_PWA';
+const CACHE_NAME = 'v4.9_Lupita_PWA';
 
 const urlsToCache = [
   './',
