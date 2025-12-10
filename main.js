@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator) {
 
 
 // --------- 2. LocalStorage para usuario ---------------------------
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const usuarioGuardado = localStorage.getItem('usuario');
     if (usuarioGuardado) {
         console.log('Usuario guardado en LocalStorage:', usuarioGuardado);
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Historial de pedidos en IndexedDB:', req.result);
         };
     };
-});
+});*/
 // -----------------------------------------------------------------
 
 

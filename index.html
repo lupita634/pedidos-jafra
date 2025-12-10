@@ -143,17 +143,6 @@
   </div>
 </div>
 
-    <!-- Tarjetita adicional -->
-    <div class="card mt-4 p-3 shadow-sm border-0" style="background: #ffffff; border-radius: 15px;">
-      <h4 class="fw-bold text-center">¿Por qué elegirnos?</h4>
-      <p class="text-center mb-0">
-        Atención personalizada, productos originales, entregas seguras y asesoría
-        para elegir lo mejor para tu piel. ¡Estamos para ayudarte!
-      </p>
-    </div>
-
-  </div>
-</div>
 
       <!-- PRODUCTOS -->
       <div class="section-wrap" id="productos">
@@ -290,29 +279,7 @@
   <!-- BOTÓN FLOTANTE -->
   <button id="btnSubir" title="Volver arriba">↑</button>
 
-  <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register('./sw.js')
-    .then(() => console.log("SW registrado correctamente"))
-    .catch(err => console.log("Error al registrar SW:", err));
-}
-</script>
-
-  <!-- BOTÓN SUBIR -->
-  <script>
-    const btnSubir = document.getElementById("btnSubir");
-
-    window.onscroll = function() {
-      btnSubir.style.display =
-        (document.documentElement.scrollTop > 200) ? "flex" : "none";
-    };
-
-    btnSubir.addEventListener("click", function() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
+ 
   <!-- Bootstrap JS agregado -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
